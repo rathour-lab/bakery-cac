@@ -388,7 +388,7 @@ ${formData.message}`
             {
               icon: <FaMapMarkerAlt />,
               title: "Institute Location",
-              desc: "SCO 285, First Floor Sector, 32D Chandigarh",
+              desc: "SCO 285, First Floor, Sector 32D Chandigarh",
             },
 
             {
@@ -443,16 +443,17 @@ ${formData.message}`
           ))}
 
           {/* Google Map */}
-          <div className="overflow-hidden rounded-[2rem] shadow-2xl border border-[#ece5db]">
-
-            <iframe
-              title="Location"
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3430.333177337142!2d76.7739774!3d30.7090326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDQyJzMyLjUiTiA3NsKwNDYnMjYuMyJF!5e0!3m2!1sen!2sin!4v1779780892457!5m2!1sen!2sin"
-              className="w-full h-[300px]"
-              loading="lazy"
-            />
-
-          </div>
+         <div className="overflow-hidden rounded-[2rem] shadow-2xl border border-[#ece5db]">
+  <iframe
+    title="CAC Cake Academy of Chandigarh"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4471.790133180301!2d76.77236117817196!3d30.708781728547283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedf26fa5c0ad%3A0xa7dfeaa32665dba1!2sCAC%20Cake%20Academy%20of%20Chandigarh!5e0!3m2!1sen!2sin!4v1780305925234!5m2!1sen!2sin"
+    className="w-full h-[300px]"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
 
         </motion.div>
 

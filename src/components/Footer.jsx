@@ -177,27 +177,26 @@ export default function Footer() {
             <div className="space-y-5 text-[#D6CCC2]">
 
               {/* LOCATION */}
-              <div className="flex items-start gap-4">
+            <a
+  href="https://maps.google.com/?q=CAC+Cake+Academy+of+Chandigarh"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-start gap-4 group"
+>
+  <div className="w-11 h-11 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl flex items-center justify-center flex-shrink-0">
+    <FaMapMarkerAlt className="text-[#D4A373] group-hover:scale-110 transition-transform" />
+  </div>
 
-                <div className="w-11 h-11 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl flex items-center justify-center flex-shrink-0">
+  <div>
+    <p className="text-white font-semibold">
+      Location
+    </p>
 
-                  <FaMapMarkerAlt className="text-[#D4A373]" />
-
-                </div>
-
-                <div>
-
-                  <p className="text-white font-semibold">
-                    Location
-                  </p>
-
-                  <p className="text-sm leading-6 mt-1">
-                    SCO 285, First Floor Sector 32D Chandigarh
-                  </p>
-
-                </div>
-
-              </div>
+    <p className="text-sm leading-6 mt-1 group-hover:text-[#D4A373] transition-colors">
+      SCO 285, First Floor Sector 32D Chandigarh
+    </p>
+  </div>
+</a>
 
               {/* PHONE */}
               <div className="flex items-start gap-4">

@@ -1,25 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 
 export default function Hero() {
-  const images = [
-    "https://i.pinimg.com/736x/1b/05/d0/1b05d0a9e7ee0d72ab8f93ac1e1096d9.jpg",
-    "https://i.pinimg.com/1200x/4f/f9/3b/4ff93b3b747e826cebfdcc8b245f25b7.jpg",
-    "https://i.pinimg.com/1200x/6c/20/01/6c2001bb72d5bd08a1d1c3c3fe8d75d5.jpg",
-  ];
-
-  const [current, setCurrent] = useState(0);
-
-  // AUTO SLIDER
-  useEffect(() => {
-    const slider = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 4000);
-
-    return () => clearInterval(slider);
-  }, [images.length]);
-
   return (
     <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden bg-[#F7F1E7] pt-20 md:pt-24">
 
@@ -155,34 +137,29 @@ export default function Hero() {
 
         </motion.div>
 
-        {/* RIGHT IMAGE SLIDER */}
+        {/* RIGHT VIDEO SECTION */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9 }}
           className="relative"
         >
-
-          {/* MAIN SLIDER */}
           <div className="relative h-[480px] md:h-[580px] rounded-[2.5rem] overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.18)] border border-white/40">
 
-            {images.map((img, index) => (
-
-              <motion.img
-                key={index}
-                src={img}
-                alt="Bakery Training"
-                className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ${
-                  current === index
-                    ? "opacity-100 scale-100"
-                    : "opacity-0 scale-110"
-                }`}
-              />
-
-            ))}
+            {/* VIDEO */}
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              className="absolute inset-0 w-full h-full object-cover scale-100"
+            >
+              <source src="/video-cac.mp4" type="video/mp4" />
+            </video>
 
             {/* OVERLAY */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none"></div>
 
             {/* FLOATING CARD */}
             <motion.div
@@ -206,25 +183,6 @@ export default function Hero() {
               </p>
 
             </motion.div>
-
-          </div>
-
-          {/* SLIDER DOTS */}
-          <div className="flex justify-center gap-3 mt-6 pb-2">
-
-            {images.map((_, index) => (
-
-              <button
-                key={index}
-                onClick={() => setCurrent(index)}
-                className={`h-3 rounded-full transition-all duration-300 ${
-                  current === index
-                    ? "w-10 bg-[#1F4E9D]"
-                    : "w-3 bg-[#DCCFBE]"
-                }`}
-              />
-
-            ))}
 
           </div>
 
